@@ -85,7 +85,7 @@ export default (Component) => {
         sortHandle: PropTypes.string
       };
 
-      handleSortableItemReadyToMove(e) {
+      handleSortableItemReadyToMove = (e) => {
         handleSortableItemReadyToMove.call(this, e);
       }
 
@@ -106,8 +106,8 @@ export default (Component) => {
             className={sortableClassName}
             style={sortableStyle}
             sortHandle={sortHandle}
-            onMouseDown={::this.handleSortableItemReadyToMove}
-            onTouchStart={::this.handleSortableItemReadyToMove}
+            onMouseDown={this.handleSortableItemReadyToMove}
+            onTouchStart={this.handleSortableItemReadyToMove}
           />
         );
       }
