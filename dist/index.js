@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports["default"] = exports.SortableItemMixin = exports.SortableContainer = exports.sortable = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -515,8 +515,11 @@ var SortableContainer = function SortableContainer(_ref) {
   }
 };
 
-Sortable.SortableItemMixin = (0, _SortableItemMixin["default"])();
-Sortable.sortable = _SortableItemMixin["default"];
-Sortable.SortableContainer = (0, _SortableItemMixin["default"])(SortableContainer);
+var SortableMixinCon = (0, _SortableItemMixin["default"])();
+exports.SortableItemMixin = SortableMixinCon;
+var sortable = _SortableItemMixin["default"];
+exports.sortable = sortable;
+var SortableContainerCon = (0, _SortableItemMixin["default"])(SortableContainer);
+exports.SortableContainer = SortableContainerCon;
 var _default = Sortable;
 exports["default"] = _default;

@@ -523,8 +523,10 @@ const SortableContainer = ({
   }
 };
 
-Sortable.SortableItemMixin = SortableItemMixin();
-Sortable.sortable = SortableItemMixin;
-Sortable.SortableContainer = SortableItemMixin(SortableContainer);
+const SortableMixinCon = SortableItemMixin();
+export const sortable = SortableItemMixin;
+const SortableContainerCon = SortableItemMixin(SortableContainer);
+export {SortableContainerCon as SortableContainer};
+export {SortableMixinCon as SortableItemMixin};
 
 export default Sortable;
